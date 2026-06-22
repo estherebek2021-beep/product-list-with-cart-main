@@ -1,74 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List With Cart</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product list with cart</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
 
-  Desserts
+    <main class="container">
 
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
+        <section class="products-section">
 
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
+            <h1>Desserts</h1>
 
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
+            <div id="products"></div>
 
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
+        </section>
 
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
+        <aside id="cart">
 
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
+            <h2>
+                Your Cart (<span id="cartCount">0</span>)
+            </h2>
 
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
+            <div id="cartItems">
+                <p>Your added items will appear here</p>
+            </div>
 
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
+            <div id="cartTotal"></div>
 
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
+        </aside>
 
-  Your Cart (<!-- Quantity -->)
-  Your added items will appear here
+    </main>
 
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+    <div id="modal">
+
+        <div class="modal-content">
+
+            <h2>Order Confirmed</h2>
+
+            <p>We hope you enjoy your food!</p>
+
+            <div id="orderSummary"></div>
+
+            <button onclick="startNewOrder()">
+                Start New Order
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="project.js"></script>
+
 </body>
 </html>
